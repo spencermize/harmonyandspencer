@@ -1,0 +1,69 @@
+//Custom Color
+$trans-white: rgba(255,255,255,.9);
+$trans-black: rgba(41,41,41,.9);
+$almost-white: #f7f7f7;
+
+//Color Overrides
+$brand-primary: rgba(1, 134, 81,1);
+$link-color: rgba(0, 68, 102, 1);
+$brand-secondary: rgba(1, 87, 62,1);
+$brand-danger: rgba(223, 82, 80,1);
+$brand-warning: rgba(239, 166, 5,1);
+$carousel-caption-color: $trans-black;
+$carousel-text-shadow: none;
+
+$state-success-text:             $brand-primary;
+$state-success-bg:               tint($brand-primary,90%);
+$state-success-border:          darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                $link-color;
+$state-info-bg:                  tint($link-color,90%);
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             $brand-warning;
+$state-warning-bg:               tint($brand-warning,90%);
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              $brand-danger;
+$state-danger-bg:                tint($brand-danger,90%);
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+//Text
+$font-family-sans-serif:	'Cabin', sans-serif;
+$font-family-base:			$font-family-sans-serif;
+$line-height-base:			1.3;
+$font-size-base:				24px;
+$text-color:					$almost-white;
+
+//Headings
+$headings-font-family:		'mohavebold', sans-serif;
+$headings-font-weight:		700;
+$headings-color: 				$almost-white;
+$headings-line-height:		.8em;
+$font-size-h1:		12vw;
+$font-size-h2:		9vw;
+$font-size-h3:		6vw;
+$font-size-h4:		4vw;
+
+// Basics of a navbar
+$navbar-height:						75px;
+$navbar-collapsed-height:			75px;
+$navbar-default-color:				$link-color;
+$navbar-default-link-color:			$link-color;
+$navbar-default-link-hover-color:	$brand-primary;
+$navbar-default-link-active-color:	$brand-primary;
+$navbar-default-bg:					$almost-white;
+$navbar-default-link-active-bg:		darken($navbar-default-bg, 3.5%);
+$navbar-default-border:				darken($navbar-default-bg, 6.5%);
+
+//Sizing
+// Small screen / tablet
+$container-tablet:            100%;
+$container-sm:                $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:           100%;
+$container-md:                $container-desktop;
+
+$container-large-desktop:     100%;
+$container-lg:                $container-large-desktop;

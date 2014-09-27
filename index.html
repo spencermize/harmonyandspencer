@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="home">
+	<ul class="post-list">
+	{% for post in site.posts %}
+		<li class="{% cycle 'bg-green', 'bg-blue', 'bg-black' %} {% cycle 'text-left', 'text-right' %}">
+			<h1 id="{{post.title | join | downcase}}">{{ post.title }}</h1>
+			<h2>{{ post.subtitle }}</h2>
+			<div>{{ post.content }}</div>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
