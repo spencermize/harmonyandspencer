@@ -1,6 +1,24 @@
 html{
 	min-height: 100%;
+	background: $brand-primary;
 }
+body{
+	background: inherit;	
+}
+h1{
+	color: $almost-white;
+	text-align: center;
+	margin-left: -20px;
+	position: relative;
+	z-index: 1;
+}
+	h2{
+		display: block;
+		font-family: 'Josefin Sans', sans-serif;
+		color: $almost-white;
+		text-align: center;
+	}
+
 @media (max-width: 600px) {
 	p,li{
 		font-size: 16px;	
@@ -12,40 +30,55 @@ hr{
 	clear: both;
 	background: tint($brand-primary,50%);
 	margin: 25px 0;
-	background-image: -webkit-linear-gradient(left, #000, #018651, #000);
-	background-image: -moz-linear-gradient(left, #000, #018651, #000);
-	background-image: -ms-linear-gradient(left, #000, #018651, #000);
-	background-image: -o-linear-gradient(left, #000, #018651, #000);
-	background-image: linear-gradient(left, #000, #018651, #000);
+	background-image: -webkit-linear-gradient(left, $brand-primary, darken($brand-primary,10%), $brand-primary);
+	background-image: -moz-linear-gradient(left, $brand-primary, darken($brand-primary,10%), $brand-primary);
+	background-image: -ms-linear-gradient(left, $brand-primary, darken($brand-primary,10%), $brand-primary);
+	background-image: -o-linear-gradient(left, $brand-primary, darken($brand-primary,10%), $brand-primary);
+	background-image: linear-gradient(left, $brand-primary, darken($brand-primary,10%), $brand-primary);
 }
 .post-list{
 	list-style: none;
-	margin: 0;	
-	padding: 0;
-	
+	padding-left: 0 ;
+	padding-right: 0;
 	>li{
-		padding: 20px 20px 60px 20px;
-		overflow: auto;
-		ul{
-			text-align: left;
-			list-style: none;
-			li{
-				margin: 10px 0;	
-			}
-			@media (min-width: $screen-sm-min) {
-				li{
-					margin: 0;
-					text-align: center;
-				}
-			}
-			em{
-				color: $brand-warning;
-				font-family: "Waiting for the Sunrise";
-				font-style: italic;
-				font-weight: 700;
-				line-height: 1em;
-				font-size: 1.5em;
+		overflow: hidden;
+		position: relative;
+		.map{
+			position:absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	.amp{
+		display: block;
+		text-align: center;
+		@extend h1;
+	}
+}
+		#map{
+			h1{
+				color: $brand-primary;	
 			}
 		}
+nav{
+	clear: both;
+	position: fixed;
+	top: 200px;
+	z-index: 200;
+	background: lighten($brand-primary,10%);
+	ul{
+		padding-left: 20px;	
+	}
+	li{
+		list-style: none;
+	}
+	&.right{
+		text-align: right;
+		right: 0;
+		padding-right: 20px;
+	}
+	&.left{
+		padding-left: 0;
+		padding-right: 20px;
 	}
 }

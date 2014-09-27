@@ -3,13 +3,28 @@ layout: default
 ---
 
 <div class="home">
-	<ul class="post-list">
+	<nav class="left" data-spy="affix" data-offset-top="100" >
+		<ul>
+			{% for post in site.posts %}
+			{% if forloop.index > 1 %}<li><a href="#{{post.title | remove:'&' | remove:' '| join | downcase}}">{{post.french}}</a></li>{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
+<ul class="post-list clearfix">
 	{% for post in site.posts %}
-		<li class="{% cycle 'bg-green', 'bg-blue', 'bg-black' %} {% cycle 'text-left', 'text-right' %}">
-			<h1 id="{{post.title | join | downcase}}">{{ post.title }}</h1>
-			<h2>{{ post.subtitle }}</h2>
+		<li class="col-md-8"  id="{{post.title | remove:'&' | remove:' '| join | downcase}}">
+			<h1>{{ post.title }}</h1>
+			<h2>{{ post.subtitle}}</h2>
 			<div>{{ post.content }}</div>
 		</li>
+		<hr />
 	{% endfor %}
 	</ul>
+	<nav class="right" data-spy="affix" data-offset-top="100" >
+		<ul>
+			{% for post in site.posts %}
+			{% if forloop.index > 1 %}<li><a href="#{{post.title | remove:'&' | remove:' '| join | downcase}}">{{post.title}}</a></li>{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
 </div>
