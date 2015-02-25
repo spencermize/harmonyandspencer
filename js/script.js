@@ -1,8 +1,7 @@
 var $j = jQuery.noConflict();
 $j(function() {
-	$j(".post-list li").height($j(window).height()*.9);
 	var map = $j(".map");
-	var par = map.closest("li").removeClass("col-md-8").addClass("col-md-12");
+	var par = map.closest("li").removeClass("col-md-8").addClass("col-md-12").height($j(window).height()*.9);
 	map.height(par.innerHeight());
 
 	 $j('a[href*=#]:not([href=#])').click(function() {

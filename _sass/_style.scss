@@ -48,6 +48,7 @@ hr{
 			top: 0;
 			left: 0;
 		}
+		padding-bottom: 40px;
 	}
 	.amp{
 		display: block;
@@ -81,4 +82,32 @@ nav{
 		padding-left: 0;
 		padding-right: 20px;
 	}
+}
+img{
+	-webkit-box-shadow: 5px 5px 20px #444;
+	-moz-box-shadow: 5px 5px 20px #444;
+	box-shadow: 5px 5px 20px #444;
+}
+.tilt{
+	-webkit-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-o-transform:rotate(5deg);
+	transform:rotate(5deg);
+
+	display: inline-block;
+}
+.opp{
+	-webkit-transform:rotate(-5deg);
+	-moz-transform:rotate(-5deg);
+	-o-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+}
+.sm{
+	max-width: 75%;
+}
+.center{
+	text-align: center;
+}
+.big-pad{
+	margin-right: 40px;
 }
